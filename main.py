@@ -1,11 +1,11 @@
 import pandas as pd
 import sqlite3
 
-rootpath = '/Users/zhenghong/Documents/work/aigc/'
+rootpath = './'
 
 
 # 打开数据库连接
-conn = sqlite3.connect(rootpath + 'prompt1.db')
+conn = sqlite3.connect(rootpath + 'prompt.db')
 cursor = conn.cursor()
 
 # 创建表结构
@@ -53,7 +53,7 @@ class WordItem(BaseModel):
 
 # 连接数据库的函数
 def get_db_connection():
-    conn = sqlite3.connect(rootpath + 'prompt1.db')
+    conn = sqlite3.connect(rootpath + 'prompt.db')
     conn.row_factory = sqlite3.Row
     return conn
 
