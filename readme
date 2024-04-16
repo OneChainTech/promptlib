@@ -1,4 +1,7 @@
+# 依赖包安装
 pip install -r requirements.txt
+
+# 服务启动 端口、后台启动
 uvicorn main:app --reload
 uvicorn main:app --reload --port 8001
 python -m uvicorn main:app --reload --port 8082
